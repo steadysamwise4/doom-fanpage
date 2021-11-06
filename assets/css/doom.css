@@ -27,3 +27,7 @@ body {
     color: gray;
     text-align: center;
 }
+.description {
+    display: flex;
+    justify-content: center;
+}
