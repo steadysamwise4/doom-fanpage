@@ -86,4 +86,4 @@ var getDoomData = function(id) {
 }
 
 getDoomData(doctorDoomId);
-getDoomComics();
+getDoomComics(doctorDoomId);
