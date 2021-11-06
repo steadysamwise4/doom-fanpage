@@ -27,7 +27,7 @@ var displayDoomComics = function(comicData) {
     let title = "";
     
     for (let i = 0; i < DoomComicsArr.length; i++) {
-        title += DoomComicsArr[i].title + "<br>";
+        title = DoomComicsArr[i].title + "<br>";
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
         listItemEl.classList = "list";
