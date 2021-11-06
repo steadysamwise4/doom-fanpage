@@ -8,6 +8,7 @@ var displayDoomInfo = function(doom) {
     var image = doom.data.results[0].thumbnail.path + ".jpg";
     var imageEl = document.createElement("img");
     imageEl.setAttribute("src", image);
+    imageEl.classList = "responsive";
     heroEl.appendChild(imageEl);
 
     // hero data
@@ -33,6 +34,7 @@ var displayDoomComics = function(comicData) {
         var img = DoomComicsArr[i].thumbnail.path + "/portrait_xlarge.jpg";
         var imgEl = document.createElement("img");
         imgEl.setAttribute("src", img);
+        
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
         listItemEl.classList = "list";

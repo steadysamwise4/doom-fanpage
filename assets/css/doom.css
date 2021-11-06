@@ -10,6 +10,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .hero {
     display: flex;
@@ -37,9 +38,16 @@ body {
     text-align: center;
     color: ghostwhite;
     list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: forestgreen solid 3px;
 }
 .comic-list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.responsive {
+    max-width: 100%;
+    height: auto;
+  }
