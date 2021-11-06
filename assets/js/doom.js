@@ -30,7 +30,7 @@ var displayDoomComics = function(comicData) {
     
     for (let i = 0; i < DoomComicsArr.length; i++) {
         title = DoomComicsArr[i].title;
-        var img = DoomComicsArr[i].thumbnail.path + "/prtrait_small.jpg";
+        var img = DoomComicsArr[i].thumbnail.path + "/portrait_small.jpg";
         var imgEl = document.createElement("img");
         imgEl.setAttribute("src", img);
         var listItemEl = document.createElement("li");
