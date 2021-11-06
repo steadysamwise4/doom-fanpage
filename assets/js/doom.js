@@ -3,7 +3,7 @@ var heroEl = document.querySelector(".hero");
 
 
 var displayDoomInfo = function(doom) {
-    var image = doom.data.results[0].thumbnail.path;
+    var image = doom.data.results[0].thumbnail.path + ".jpg";
     var imageEl = document.createElement("img");
     imageEl.setAttribute("src", image);
     heroEl.appendChild(imageEl);
