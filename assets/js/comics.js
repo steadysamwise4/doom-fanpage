@@ -3,6 +3,9 @@ var descriptionEl = document.querySelector(".description");
 var comicListEl = document.querySelector(".comic-list");
 var marvelEl = document.querySelector(".marvel");
 
+// characters
+var doctorDoomId = "1009281";
+
 var displayDoomInfo = function(doom) {
 
     // hero image
@@ -53,8 +56,8 @@ var displayDoomComics = function(comicData) {
 }
 
 
-var getDoomComics = function() {
-    var comicUrl = "https://gateway.marvel.com:443/v1/public/characters/1009281/comics?format=comic&formatType=comic&noVariants=true&dateRange=1962-01-01%2C1990-01-02&orderBy=onsaleDate&limit=100&apikey=4d2e0c623d661843745081ec1b70a4bb";
+var getDoomComics = function(id) {
+    var comicUrl = "https://gateway.marvel.com:443/v1/public/characters/" + id + "/comics?format=comic&formatType=comic&noVariants=true&dateRange=1962-01-01%2C1990-01-02&orderBy=onsaleDate&limit=100&apikey=4d2e0c623d661843745081ec1b70a4bb";
 
     fetch(comicUrl).then(function(response) {
         if(response.ok) {
@@ -67,8 +70,8 @@ var getDoomComics = function() {
         }
     });
 }
-var getDoomData = function() {
-    var apiUrl = "https://gateway.marvel.com:443/v1/public/characters/1009281?apikey=4d2e0c623d661843745081ec1b70a4bb";
+var getDoomData = function(id) {
+    var apiUrl = "https://gateway.marvel.com:443/v1/public/characters/" + id + "?apikey=4d2e0c623d661843745081ec1b70a4bb";
     
     fetch(apiUrl).then(function(response) {
         if(response.ok) {
@@ -82,5 +85,5 @@ var getDoomData = function() {
     });
 }
 
-getDoomData();
+getDoomData(doctorDoomId);
 getDoomComics();
