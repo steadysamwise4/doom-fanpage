@@ -31,7 +31,8 @@ var displayDoomComics = function(comicData) {
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
         listItemEl.classList = "list";
-        comicListEl.appendChild(listItemEl);
+        console.log(title);
+        // comicListEl.appendChild(listItemEl);
       }
       
     console.log(DoomComicsArr);
