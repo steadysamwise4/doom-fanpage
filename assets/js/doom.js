@@ -31,11 +31,11 @@ var displayDoomComics = function(comicData) {
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
         listItemEl.classList = "list";
-        console.log(title);
-        // comicListEl.appendChild(listItemEl);
+        // console.log(title);
+        comicListEl.appendChild(listItemEl);
       }
       
-    console.log(DoomComicsArr);
+    //console.log(DoomComicsArr);
 }
 
 
