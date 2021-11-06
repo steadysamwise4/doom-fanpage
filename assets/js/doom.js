@@ -22,6 +22,21 @@ var displayDoomInfo = function(doom) {
 
 }
 
+
+var getDoomComics = function() {
+    var comicUrl = "https://gateway.marvel.com:443/v1/public/characters/1009281/comics?format=comic&formatType=comic&noVariants=true&dateRange=1962-01-01%2C1990-01-02&orderBy=onsaleDate&limit=100&apikey=4d2e0c623d661843745081ec1b70a4bb";
+
+    fetch(comicUrl).then(function(response) {
+        if(response.ok) {
+        response.json().then(function(comics) {
+            console.log(comics); 
+            console.log(comics);          
+        });
+        } else {
+            console.log("Try Again, Dummy");
+        }
+    });
+}
 var getDoomData = function() {
     var apiUrl = "https://gateway.marvel.com:443/v1/public/characters/1009281?apikey=4d2e0c623d661843745081ec1b70a4bb";
     
@@ -38,3 +53,4 @@ var getDoomData = function() {
 }
 
 getDoomData();
+getDoomComics();
