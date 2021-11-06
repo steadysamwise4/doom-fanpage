@@ -4,9 +4,14 @@ body {
 }
 .marvel {
     text-align: end;
+    width: 100%;
+    
+}
+.marvel-span {
+    text-decoration:none;
     color: red;
 }
-.marvel:hover {
+.marvel-span:hover {
     color: ghostwhite;
 }
 .page-title {
