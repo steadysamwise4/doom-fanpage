@@ -21,12 +21,7 @@ var displayDoomInfo = function(doom) {
     infoEl.textContent = info;
     descriptionEl.appendChild(infoEl);
 
-    // marvel  attribution reference
-    var marvel = doom.attributionHTML;
-    var marvelSpanEl = document.createElement("span");
-    marvelSpanEl.classList = "marvel-span";
-    marvelSpanEl.innerHTML = marvel;
-    marvelEl.appendChild(marvelSpanEl);
+    
 
 
 
