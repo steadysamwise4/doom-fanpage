@@ -1,0 +1,2 @@
+getDoomData(wolverineId);
+getDoomComics(wolverineId);

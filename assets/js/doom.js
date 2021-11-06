@@ -1,0 +1,2 @@
+getDoomData(doctorDoomId);
+getDoomComics(doctorDoomId);

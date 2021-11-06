@@ -16,7 +16,7 @@ body {
 }
 .page-title {
     text-align: center;
-    color: forestgreen;
+    color: ghostwhite;
     font-size: 4.0rem;
 }
 .container {
@@ -63,4 +63,20 @@ body {
 .responsive {
     max-width: 100%;
     height: auto;
+  }
+  .char-link {
+      text-decoration: none;
+      text-align: center;
+      font-size: 2.0rem;
+      margin:20px 0
+
+  }
+  .char-link:hover {
+      color: ghostwhite;
+  }
+  .d {
+      color: forestgreen;
+  }
+  .w {
+      color:yellow;
   }

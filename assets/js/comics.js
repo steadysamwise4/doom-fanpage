@@ -86,5 +86,3 @@ var getDoomData = function(id) {
     });
 }
 
-getDoomData(wolverineId);
-getDoomComics(wolverineId);
