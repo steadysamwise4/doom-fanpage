@@ -1,6 +1,7 @@
 var heroEl = document.querySelector(".hero");
 var descriptionEl = document.querySelector(".description");
 var comicListEl = document.querySelector(".comic-list");
+var marvelEl = document.querySelector(".marvel");
 
 var displayDoomInfo = function(doom) {
 
@@ -19,6 +20,13 @@ var displayDoomInfo = function(doom) {
     infoEl.classList = "info";
     infoEl.textContent = info;
     descriptionEl.appendChild(infoEl);
+
+    // marvel  attribution reference
+    var marvel = doom.attributionHTML;
+    var marvelSpanEl = document.createElement("span");
+    marvelSpanEl.innerHTML = marvel;
+    marvelEl.appendChild(marvelSpanEl);
+
 
 
 }

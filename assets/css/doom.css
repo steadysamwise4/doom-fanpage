@@ -2,6 +2,13 @@ body {
     background-color: black;
 
 }
+.marvel {
+    text-align: end;
+    color: red;
+}
+.marvel:hover {
+    color: ghostwhite;
+}
 .page-title {
     text-align: center;
     color: forestgreen;
