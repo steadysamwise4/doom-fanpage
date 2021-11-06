@@ -29,9 +29,12 @@ body {
 }
 .description {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 .list {
     text-align: center;
     color: ghostwhite;
+    list-style: none;
 }

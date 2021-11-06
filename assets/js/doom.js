@@ -24,15 +24,23 @@ var displayDoomInfo = function(doom) {
 
 var displayDoomComics = function(comicData) {
     var DoomComicsArr = comicData.data.results;
+    
     let title = "";
+
     
     for (let i = 0; i < DoomComicsArr.length; i++) {
-        title = DoomComicsArr[i].title + "<br>";
+        title = DoomComicsArr[i].title;
+        var img = DoomComicsArr[i].thumbnail.path + "/prtrait_small.jpg";
+        var imgEl = document.createElement("img");
+        imgEl.setAttribute("href", img);
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
         listItemEl.classList = "list";
         // console.log(title);
+        comicListEl.appendChild(imgEl);
         comicListEl.appendChild(listItemEl);
+
+        
       }
       
     //console.log(DoomComicsArr);
