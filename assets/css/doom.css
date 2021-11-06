@@ -15,8 +15,15 @@ body {
     display: flex;
     justify-content: center;
 }
-.info {
+.doom-text {
     text-align: center;
     color: ghostwhite;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    width: 375px;
+
+}
+.info {
+    font-size: 1.6rem;
+    color: gray;
+    text-align: center;
 }
