@@ -38,3 +38,8 @@ body {
     color: ghostwhite;
     list-style: none;
 }
+.comic-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
