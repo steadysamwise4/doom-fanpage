@@ -1,6 +1,6 @@
 var heroEl = document.querySelector(".hero");
 var descriptionEl = document.querySelector(".description");
-
+var comicListEl = document.querySelector("comic-list");
 
 var displayDoomInfo = function(doom) {
 
@@ -24,6 +24,16 @@ var displayDoomInfo = function(doom) {
 
 var displayDoomComics = function(comicData) {
     var DoomComicsArr = comicData.data.results;
+    let title = "";
+    
+    for (let i = 0; i < DoomComicsArr.length; i++) {
+        title += DoomComicsArr[i].title + "<br>";
+        var listItemEl = document.createElement("li");
+        listItemEl.textContent = title;
+        listItemEl.classList = "list";
+        comicListEl.appendChild(listItemEl);
+      }
+      
     console.log(DoomComicsArr);
 }
 
