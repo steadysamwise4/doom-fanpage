@@ -1,12 +1,23 @@
 var heroEl = document.querySelector(".hero");
-
+var descriptionEl = document.querySelector(".description");
 
 
 var displayDoomInfo = function(doom) {
+
+    // hero image
     var image = doom.data.results[0].thumbnail.path + ".jpg";
     var imageEl = document.createElement("img");
     imageEl.setAttribute("src", image);
     heroEl.appendChild(imageEl);
+
+    // hero data
+
+    var info = doom.data.results[0].urls[0].url;
+    var infoEl = document.createElement("p");
+    infoEl.classList = "info";
+    infoEl.textContent = info;
+    descriptionEl.appendChild(infoEl);
+
 
 }
 
