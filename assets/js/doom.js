@@ -13,9 +13,10 @@ var displayDoomInfo = function(doom) {
     // hero data
 
     var info = doom.data.results[0].urls[0].url;
-    var infoEl = document.createElement("p");
+    var infoEl = document.createElement("a");
+    infoEl.setAttribute("href" , info)
     infoEl.classList = "info";
-    infoEl.textContent = info;
+    infoEl.textContent = "Doom Info";
     descriptionEl.appendChild(infoEl);
 
 

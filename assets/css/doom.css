@@ -17,4 +17,6 @@ body {
 }
 .info {
     text-align: center;
+    color: ghostwhite;
+    font-size: 1.5rem;
 }
