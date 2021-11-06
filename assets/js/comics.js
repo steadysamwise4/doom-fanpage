@@ -59,7 +59,7 @@ var displayDoomComics = function(comicData) {
 
 
 var getDoomComics = function(id) {
-    var comicUrl = "https://gateway.marvel.com:443/v1/public/characters/" + id + "/comics?format=comic&formatType=comic&noVariants=true&dateRange=1962-01-01%2C1990-01-02&orderBy=onsaleDate&limit=100&apikey=4d2e0c623d661843745081ec1b70a4bb";
+    var comicUrl = "https://gateway.marvel.com:443/v1/public/characters/" + id + "/comics?format=comic&formatType=comic&noVariants=true&dateRange=1962-01-01%2C2021-11-02&orderBy=onsaleDate&limit=100&apikey=4d2e0c623d661843745081ec1b70a4bb";
 
     fetch(comicUrl).then(function(response) {
         if(response.ok) {
