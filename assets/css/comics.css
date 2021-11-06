@@ -2,6 +2,15 @@ body {
     background-color: black;
 
 }
+.home-link {
+    text-align: start;
+    text-decoration: none;
+    color: ghostwhite;
+    font-size: 1.3rem;
+}
+.home-link:hover {
+    color: grey;
+}
 .marvel {
     text-align: end;
     width: 100%;
@@ -79,4 +88,10 @@ body {
   }
   .w {
       color:yellow;
+  }
+  .list-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
