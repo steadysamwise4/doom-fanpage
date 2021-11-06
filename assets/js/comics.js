@@ -6,6 +6,7 @@ var marvelEl = document.querySelector(".marvel");
 // characters
 var doctorDoomId = "1009281";
 var wolverineId = "1009718";
+var cableId = "1009214";
 
 var displayDoomInfo = function(doom) {
 
@@ -72,7 +73,7 @@ var getDoomComics = function(id) {
     });
 }
 var getDoomData = function(id) {
-    var apiUrl = "https://gateway.marvel.com:443/v1/public/characters?name=Cable&apikey=4d2e0c623d661843745081ec1b70a4bb";
+    var apiUrl = "https://gateway.marvel.com:443/v1/public/characters/" + id + "?apikey=4d2e0c623d661843745081ec1b70a4bb";
     
     fetch(apiUrl).then(function(response) {
         if(response.ok) {

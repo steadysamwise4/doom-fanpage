@@ -89,6 +89,9 @@ body {
   .w {
       color:yellow;
   }
+  .c {
+      color:orangered;
+  }
   .list-holder {
     display: flex;
     flex-direction: column;

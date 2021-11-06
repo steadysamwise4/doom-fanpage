@@ -1,0 +1,2 @@
+getDoomData(cableId);
+getDoomComics(cableId);
