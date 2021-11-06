@@ -1,6 +1,6 @@
 var heroEl = document.querySelector(".hero");
 var descriptionEl = document.querySelector(".description");
-var comicListEl = document.querySelector("comic-list");
+var comicListEl = document.querySelector(".comic-list");
 
 var displayDoomInfo = function(doom) {
 
