@@ -92,7 +92,7 @@ var displayDoomComics = function(comicData) {
     
     var displayComicModal = function() {
         backdrop.style.display = "flex";
-        console.log(heading);
+        
         modal.style.display = "flex";
         modal.style.justifyContent = "center"
     }
