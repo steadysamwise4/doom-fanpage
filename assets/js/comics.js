@@ -93,7 +93,7 @@ var displayDoomComics = function(comicData) {
 
          // creator credits
          var creatorsArr = DoomComicsArr[issue].creators.items;
-         for (var a = 0; a <= creatorsArr.length; a++) {
+         for (var a = 0; a < creatorsArr.length; a++) {
         var job = creatorsArr[a].role;
         var person = creatorsArr[a].name;
         var creators = job + ": " + person;
