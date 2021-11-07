@@ -99,7 +99,8 @@ var displayDoomComics = function(comicData) {
          creatorListEl.classList = "creators-list";
 
          var creatorsArr = DoomComicsArr[issue].creators.items;
-         if (creatorsArr[a] === {}) {
+         console.log(creatorsArr.length);
+         if (creatorsArr.length === 0) {
             
              noneEl.textContent = "Creators Unavailable";
             console.log("Creators Unavailable");
