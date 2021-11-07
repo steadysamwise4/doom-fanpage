@@ -92,15 +92,19 @@ var displayDoomComics = function(comicData) {
          modal.appendChild(headingEl);
 
          // creator credits
+         var creatorListEl = document.createElement('ul')
+         creatorListEl.classList = "creators-list";
+
          var creatorsArr = DoomComicsArr[issue].creators.items;
          for (var a = 0; a < creatorsArr.length; a++) {
         var job = creatorsArr[a].role;
         var person = creatorsArr[a].name;
-        var creators = job + ": " + person;
-        var creatorsEl = document.createElement('p');
-        creatorsEl.textContent = creators;
-        creatorsEl.classList = "creator-list";
-        modal.appendChild(creatorsEl);
+        var creators = "<strong>" + job + ": " + "</strong>" + person;
+        var creatorsEl = document.createElement('li');
+        creatorsEl.innerHTML = creators;
+        creatorsEl.classList = "creator-list-item";
+        creatorListEl.appendChild(creatorsEl);
+        modal.appendChild(creatorListEl);
 
 
          

@@ -113,16 +113,23 @@ body {
     position:fixed;
     background: lightgray;
     padding: 10px;
-    top:100px;
-    
-    width: 750px;
+    top:200px;
+    max-width: 100%;
+    width: auto;
     z-index: 1;
   }
   .modal-head {
       text-align: center;
-      color: black;
+      color:steelblue;
   }
-  .creator-list {
+  .creators-list {
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: ghostwhite;
+      
+  }
+  .creator-list-item {
       text-align: center;
       color: black;
   }
