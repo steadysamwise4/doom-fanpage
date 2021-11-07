@@ -92,8 +92,13 @@ var displayDoomComics = function(comicData) {
          modal.appendChild(headingEl);
 
          // creator credits
-        var writer = DoomComicsArr[issue].creators.items[1].name;
-            console.log(writer);
+         var creatorsArr = DoomComicsArr[issue].creators.items;
+         for (var a = 0; a <= creatorsArr.length; a++) {
+        var role = creatorsArr[a].role;
+        var name = creatorsArr[a].name;
+        console.log(role + ": " + name);
+
+         }
          displayComicModal();
          // headingEl.textContent = "";
     } else {
