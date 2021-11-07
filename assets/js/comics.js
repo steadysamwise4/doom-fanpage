@@ -98,8 +98,9 @@ var displayDoomComics = function(comicData) {
         var name = creatorsArr[a].name;
         console.log(role + ": " + name);
 
-         }
+         
          displayComicModal();
+         }
          // headingEl.textContent = "";
     } else {
         console.log(issue);
