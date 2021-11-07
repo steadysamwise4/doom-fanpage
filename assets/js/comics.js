@@ -52,7 +52,7 @@ var displayDoomComics = function(comicData) {
          comicListEl.appendChild(backdrop);
          comicListEl.appendChild(modal);
 
-    let title = "";
+    let comicTitle = "";
 
     
     for (let i = 0; i < DoomComicsArr.length; i++) {
@@ -62,7 +62,7 @@ var displayDoomComics = function(comicData) {
 
 
         // title and cover image
-        title = DoomComicsArr[i].title;
+        comicTitle = DoomComicsArr[i].title;
         var img = DoomComicsArr[i].thumbnail.path + "/portrait_xlarge.jpg";
         var imgEl = document.createElement("img");
         imgEl.setAttribute("src", img);
@@ -70,7 +70,7 @@ var displayDoomComics = function(comicData) {
         imgEl.setAttribute("data-number", i);
         
         var listItemEl = document.createElement("li");
-        listItemEl.textContent = title;
+        listItemEl.textContent = comicTitle;
         listItemEl.classList = "list";
         listItemEl.setAttribute("data-number", i);
         // console.log(title);
@@ -93,7 +93,7 @@ var displayDoomComics = function(comicData) {
          displayComicModal();
          headingEl.textContent = "";
     } else {
-        console.log("backdrop");
+        console.log(issue);
         }
     }
     
@@ -117,7 +117,7 @@ var displayDoomComics = function(comicData) {
     // listItemEl.onclick = displayComicModal;
     // backdrop.onclick = closeComicModal;
     comicListEl.addEventListener('click', buttonClickHandler);
-    modal.addEventListener('click', closeComicModal);
+    backdrop.addEventListener('click', closeComicModal);
     //console.log(DoomComicsArr);
 }
 
