@@ -96,7 +96,12 @@ var displayDoomComics = function(comicData) {
          for (var a = 0; a <= creatorsArr.length; a++) {
         var job = creatorsArr[a].role;
         var person = creatorsArr[a].name;
-        console.log(job + ": " + person);
+        var creators = job + ": " + person;
+        var creatorsEl = document.createElement('p');
+        creatorsEl.textContent = creators;
+        creatorsEl.classList = "creator-list";
+        modal.appendChild(creatorsEl);
+
 
          
          displayComicModal();
