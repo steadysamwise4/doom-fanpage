@@ -117,6 +117,7 @@ body {
     max-width: 100%;
     width: auto;
     z-index: 1;
+    flex-direction: column;
   }
   .modal-head {
       text-align: center;
