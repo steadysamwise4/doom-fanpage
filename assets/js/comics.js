@@ -101,7 +101,7 @@ var displayDoomComics = function(comicData) {
     }
     
     var closeComicModal = function() {
-        modalEl.textContent = "";
+        modal.textContent = "";
         backdrop.style.display = "none";
         console.log("Close");
         modal.style.display = "none";
