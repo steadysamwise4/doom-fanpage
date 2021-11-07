@@ -41,6 +41,7 @@ var displayDoomComics = function(comicData) {
          // backdrop and modal
          var backdrop = document.createElement('div');
          backdrop.classList = "backdrop"
+         backdrop.setAttribute("data-number", 102)
          var modal = document.createElement('div');
          modal.classList = "modal"
     
@@ -82,6 +83,7 @@ var displayDoomComics = function(comicData) {
       var buttonClickHandler = function(event) {
           
         var issue = event.target.getAttribute("data-number");
+        if (issue <= 100) {
         console.log(issue);
         var heading = DoomComicsArr[issue].title; 
          var headingEl = document.createElement('h3')
@@ -89,6 +91,9 @@ var displayDoomComics = function(comicData) {
          headingEl.textContent = heading;
          modal.appendChild(headingEl);
          displayComicModal();
+         headingEl.textContent = "";
+    } else {
+        console.log("backdrop");
     }
     
     var displayComicModal = function() {
