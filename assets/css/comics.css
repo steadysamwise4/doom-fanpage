@@ -123,6 +123,8 @@ body {
       text-align: center;
       background-color: tan;
       color:steelblue;
+      margin:0;
+      padding:1em;
   }
   .creators-list {
       display:flex;
@@ -140,4 +142,8 @@ body {
   .none {
     text-align: center;
     color: black;
+  }
+  .descript-head {
+      font-weight: bolder;
+      text-align: center;
   }
