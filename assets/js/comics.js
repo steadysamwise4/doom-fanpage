@@ -106,8 +106,8 @@ var displayDoomComics = function(comicData) {
         creatorsEl.classList = "creator-list-item";
         creatorListEl.appendChild(creatorsEl);
         modal.appendChild(creatorListEl);
-        if (creatorsArr = {}) {
-            creatorsEl.innerHTML = "Creators Unavailable"
+        if (creatorsArr[a] = {}) {
+            creatorsEl.innerHTML = "Creators Unavailable";
         } else {
 
          
