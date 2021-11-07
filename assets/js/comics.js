@@ -2,6 +2,9 @@ var heroEl = document.querySelector(".hero");
 var descriptionEl = document.querySelector(".description");
 var comicListEl = document.querySelector(".comic-list");
 var marvelEl = document.querySelector(".marvel");
+var coverEl = document.querySelector(".cover")
+var backdropEl = document.querySelector(".backdrop")
+var modalEl = document.querySelector(".modal");
 
 // characters
 var doctorDoomId = "1009281";
@@ -50,10 +53,12 @@ var displayDoomComics = function(comicData) {
      var headingEl = document.createElement('h3')
      headingEl.classList = "modal-head";
      headingEl.textContent = heading;
-     modal.appendChild(headingEl);
+     modalEl.appendChild(headingEl);
+     
 
-     comicListEl.appendChild(backdrop);
-     comicListEl.appendChild(modal);
+
+     comicListEl.appendChild(backdropEl);
+     comicListEl.appendChild(modalEl);
        
 
 
@@ -62,6 +67,7 @@ var displayDoomComics = function(comicData) {
         var img = DoomComicsArr[i].thumbnail.path + "/portrait_xlarge.jpg";
         var imgEl = document.createElement("img");
         imgEl.setAttribute("src", img);
+        imgEl.classList = "cover";
         
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
@@ -70,9 +76,6 @@ var displayDoomComics = function(comicData) {
         comicListEl.appendChild(imgEl);
         comicListEl.appendChild(listItemEl);
 
-imgEl.onclick = displayComicModal;
-listItemEl.onclick = displayComicModal;
-backdrop.onclick = closeComicModal;
 
 
 var displayComicModal = function() {
@@ -88,6 +91,9 @@ var closeComicModal = function() {
     modal.style.display = "none";
 }
 
+imgEl.onclick = displayComicModal;
+listItemEl.onclick = displayComicModal;
+backdrop.onclick = closeComicModal;
 
         
       }
