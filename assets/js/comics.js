@@ -50,9 +50,11 @@ var displayDoomComics = function(comicData) {
      modal.classList = "modal"
 
      var heading = DoomComicsArr[i].title;
+     var headingIndex = imgEl.getAttribute("data-number");
+     var head = DoomComicsArr[headingIndex].title;
      var headingEl = document.createElement('h3')
      headingEl.classList = "modal-head";
-     headingEl.textContent = heading;
+     headingEl.textContent = head;
      modal.appendChild(headingEl);
      
 
@@ -92,8 +94,6 @@ var closeComicModal = function() {
     console.log("Close");
     modal.style.display = "none";
 }
-imgEl.getAttribute("data-number");
-listItemEl.getAttribute("data-number");
 
 imgEl.onclick = displayComicModal;
 listItemEl.onclick = displayComicModal;
