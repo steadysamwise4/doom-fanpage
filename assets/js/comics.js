@@ -38,29 +38,25 @@ var displayDoomInfo = function(doom) {
 var displayDoomComics = function(comicData) {
     var DoomComicsArr = comicData.data.results;
     
+         // backdrop and modal
+         var backdrop = document.createElement('div');
+         backdrop.classList = "backdrop"
+         var modal = document.createElement('div');
+         modal.classList = "modal"
+    
+         
+         
+    
+    
+         comicListEl.appendChild(backdrop);
+         comicListEl.appendChild(modal);
+
     let title = "";
 
     
     for (let i = 0; i < DoomComicsArr.length; i++) {
 
-         // backdrop and modal
-     var backdrop = document.createElement('div');
-     backdrop.classList = "backdrop"
-     var modal = document.createElement('div');
-     modal.classList = "modal"
-
-     var heading = DoomComicsArr[i].title;
     
-     
-     var headingEl = document.createElement('h3')
-     headingEl.classList = "modal-head";
-     headingEl.textContent = heading;
-     modal.appendChild(headingEl);
-     
-
-
-     comicListEl.appendChild(backdrop);
-     comicListEl.appendChild(modal);
        
 
 
@@ -86,6 +82,12 @@ var displayDoomComics = function(comicData) {
       var buttonClickHandler = function(event) {
         var issue = event.target.getAttribute("data-number");
         console.log(issue);
+        var heading = DoomComicsArr[issue].title; 
+         var headingEl = document.createElement('h3')
+         headingEl.classList = "modal-head";
+         headingEl.textContent = heading;
+         modal.appendChild(headingEl);
+         displayComicModal();
     }
     
     var displayComicModal = function() {
