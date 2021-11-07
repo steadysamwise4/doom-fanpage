@@ -99,7 +99,7 @@ var displayDoomComics = function(comicData) {
          if (creatorsArr[a] === {}) {
              var noneEl = document.createElement('p');
              noneEl.classList = "creator-list-item";
-            noneEl.innerHTML = "Creators Unavailable";
+            noneEl.textContent = "Creators Unavailable";
             modal.appendChild(noneEl);
 
         } else {
