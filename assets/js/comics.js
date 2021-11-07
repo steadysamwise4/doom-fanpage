@@ -90,6 +90,9 @@ var displayDoomComics = function(comicData) {
          headingEl.classList = "modal-head";
          headingEl.textContent = heading;
          modal.appendChild(headingEl);
+         var noneEl = document.createElement('p');
+         noneEl.classList = "creator-list-item";
+         modal.appendChild(noneEl);
 
          // creator credits
          var creatorListEl = document.createElement('ul')
@@ -97,10 +100,8 @@ var displayDoomComics = function(comicData) {
 
          var creatorsArr = DoomComicsArr[issue].creators.items;
          if (creatorsArr[a] === {}) {
-             var noneEl = document.createElement('p');
-             noneEl.classList = "creator-list-item";
-            noneEl.textContent = "Creators Unavailable";
-            modal.appendChild(noneEl);
+            
+             noneEl.textContent = "Creators Unavailable";
 
         } else {
         
