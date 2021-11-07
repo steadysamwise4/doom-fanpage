@@ -132,4 +132,6 @@ body {
   .creator-list-item {
       text-align: center;
       color: black;
+      padding:10px;
+      list-style: none;
   }
