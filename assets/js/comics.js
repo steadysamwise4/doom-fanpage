@@ -121,12 +121,19 @@ var displayDoomComics = function(comicData) {
         modal.appendChild(creatorListEl);
          }
         }
-        
+
         // description
+        //  static heading
         var descriptHeadEl = document.createElement('h4');
         descriptHeadEl.classList = "descript-head";
         descriptHeadEl.textContent = "Description";
         modal.appendChild(descriptHeadEl);
+
+        // content
+        var descriptContentEl = document.createElement('p');
+        descriptContentEl.classList = "descript-content";
+        descriptContentEl.textContent = DoomComicsArr[issue].description;
+        modal.appendChild(descriptContentEl);
         
         displayComicModal();
              
