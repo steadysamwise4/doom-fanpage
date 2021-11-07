@@ -102,7 +102,8 @@ var displayDoomComics = function(comicData) {
          if (creatorsArr[a] === {}) {
             
              noneEl.textContent = "Creators Unavailable";
-
+            console.log("Creators Unavailable");
+            console.log(noneEl.textContent);
         } else {
         
          for (var a = 0; a < creatorsArr.length; a++) {
