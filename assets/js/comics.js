@@ -70,12 +70,12 @@ var displayDoomComics = function(comicData) {
         var imgEl = document.createElement("img");
         imgEl.setAttribute("src", img);
         imgEl.classList = "cover";
-        imgEl.setAttribute("data-number", "i");
+        imgEl.setAttribute("data-number", i);
         
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
         listItemEl.classList = "list";
-        listItemEl.setAttribute("data-number", "i");
+        listItemEl.setAttribute("data-number", i);
         // console.log(title);
         comicListEl.appendChild(imgEl);
         comicListEl.appendChild(listItemEl);
