@@ -94,6 +94,7 @@ var displayDoomComics = function(comicData) {
          headingEl.textContent = "";
     } else {
         console.log("backdrop");
+        }
     }
     
     var displayComicModal = function() {
