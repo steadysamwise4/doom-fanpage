@@ -90,6 +90,10 @@ var displayDoomComics = function(comicData) {
          headingEl.classList = "modal-head";
          headingEl.textContent = heading;
          modal.appendChild(headingEl);
+
+         // creator credits
+        var writer = DoomComicsArr[issue].creators.items[1].name;
+            console.log(writer);
          displayComicModal();
          // headingEl.textContent = "";
     } else {
