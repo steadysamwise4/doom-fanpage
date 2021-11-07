@@ -39,6 +39,24 @@ var displayDoomComics = function(comicData) {
 
     
     for (let i = 0; i < DoomComicsArr.length; i++) {
+
+         // backdrop and modal
+     var backdrop = document.createElement('div');
+     backdrop.classList = "backdrop"
+     var modal = document.createElement('div');
+     modal.classList = "modal"
+
+     var heading = DoomComicsArr[i].title;
+     var headingEl = document.createElement('h3')
+     headingEl.classList = "modal-head";
+     headingEl.textContent = heading;
+
+     comicListEl.appendChild(backdrop);
+     comicListEl.appendChild(modal);
+       
+
+
+        // title and cover image
         title = DoomComicsArr[i].title;
         var img = DoomComicsArr[i].thumbnail.path + "/portrait_xlarge.jpg";
         var imgEl = document.createElement("img");
@@ -51,11 +69,30 @@ var displayDoomComics = function(comicData) {
         comicListEl.appendChild(imgEl);
         comicListEl.appendChild(listItemEl);
 
+
+var displayComicModal = function() {
+    backdrop.style.display = "flex";
+
+    modal.style.display = "flex";
+    modal.style.justifyContent = "center"
+}
+
+var closeComicModal = function() {
+    backdrop.style.display = "none";
+
+    modal.style.display = "none";
+}
+
+imgEl.onclick = displayComicModal();
+listItemEl.onclick = displayComicModal();
+backdrop.onclick = closeComicModal();
         
       }
       
     //console.log(DoomComicsArr);
 }
+
+
 
 
 var getDoomComics = function(id) {

@@ -98,3 +98,27 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .backdrop {
+      display:none;
+      position:fixed;
+      background: rgba(0,0,0,0.5);
+      top:0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 1;
+  }
+  .modal {
+    display:none;
+    position:fixed;
+    background: lightgray;
+    padding: 10px;
+    top:100px;
+    left: calc(50% - 140px);
+    width: 750px;
+    z-index: 1;
+  }
+  .modal-head {
+      text-align: center;
+      color: ghostwhite;
+  }
