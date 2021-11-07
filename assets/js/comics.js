@@ -91,7 +91,7 @@ var displayDoomComics = function(comicData) {
          headingEl.textContent = heading;
          modal.appendChild(headingEl);
          displayComicModal();
-         headingEl.textContent = "";
+         // headingEl.textContent = "";
     } else {
         console.log(issue);
         }
