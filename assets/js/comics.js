@@ -97,11 +97,11 @@ var displayDoomComics = function(comicData) {
         backdrop.style.display = "flex";
         
         modal.style.display = "flex";
-        modal.style.justifyContent = "center"
+        modal.style.justifyContent = "center";
     }
     
     var closeComicModal = function() {
-        headingEl.textContent = "";
+        modalEl.textContent = "";
         backdrop.style.display = "none";
         console.log("Close");
         modal.style.display = "none";
@@ -111,7 +111,7 @@ var displayDoomComics = function(comicData) {
     // listItemEl.onclick = displayComicModal;
     // backdrop.onclick = closeComicModal;
     comicListEl.addEventListener('click', buttonClickHandler);
-    backdrop.addEventListener('click', closeComicModal);
+    modal.addEventListener('click', closeComicModal);
     //console.log(DoomComicsArr);
 }
 
