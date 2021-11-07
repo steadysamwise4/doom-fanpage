@@ -95,8 +95,8 @@ var displayDoomComics = function(comicData) {
          var creatorsArr = DoomComicsArr[issue].creators.items;
          for (var a = 0; a <= creatorsArr.length; a++) {
         var job = creatorsArr[a].role;
-        var name = creatorsArr[a].name;
-        console.log(job + ": " + name);
+        var person = creatorsArr[a].name;
+        console.log(job + ": " + person);
 
          
          displayComicModal();
@@ -117,6 +117,7 @@ var displayDoomComics = function(comicData) {
     }
     
     var closeComicModal = function() {
+        
         modal.textContent = "";
         backdrop.style.display = "none";
         console.log("Close");
