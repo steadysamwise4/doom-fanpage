@@ -121,6 +121,7 @@ body {
   }
   .modal-head {
       text-align: center;
+      background-color: tan;
       color:steelblue;
   }
   .creators-list {
@@ -135,4 +136,8 @@ body {
       color: black;
       padding:10px;
       list-style: none;
+  }
+  .none {
+    text-align: center;
+    color: black;
   }

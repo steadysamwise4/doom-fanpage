@@ -91,7 +91,7 @@ var displayDoomComics = function(comicData) {
          headingEl.textContent = heading;
          modal.appendChild(headingEl);
          var noneEl = document.createElement('p');
-         noneEl.classList = "creator-list-item";
+         noneEl.classList = "none";
         
 
          // creator credits
