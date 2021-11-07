@@ -92,7 +92,7 @@ var displayDoomComics = function(comicData) {
          modal.appendChild(headingEl);
          var noneEl = document.createElement('p');
          noneEl.classList = "creator-list-item";
-         modal.appendChild(noneEl);
+        
 
          // creator credits
          var creatorListEl = document.createElement('ul')
@@ -105,6 +105,8 @@ var displayDoomComics = function(comicData) {
              noneEl.textContent = "Creators Unavailable";
             console.log("Creators Unavailable");
             console.log(noneEl.textContent);
+            modal.appendChild(noneEl);
+            displayComicModal();
         } else {
         
          for (var a = 0; a < creatorsArr.length; a++) {
@@ -118,9 +120,9 @@ var displayDoomComics = function(comicData) {
         creatorListEl.appendChild(creatorsEl);
         modal.appendChild(creatorListEl);
         
+        displayComicModal();
          }    
          
-         displayComicModal();
         }
         
          // headingEl.textContent = "";
