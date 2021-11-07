@@ -81,7 +81,7 @@ var displayDoomComics = function(comicData) {
         
       }
       var buttonClickHandler = function(event) {
-          modal.innerHTML = "";
+         
         var issue = event.target.getAttribute("data-number");
         if (issue <= 100) {
         console.log(issue);
