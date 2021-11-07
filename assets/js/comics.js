@@ -80,6 +80,7 @@ var displayDoomComics = function(comicData) {
         
       }
       var buttonClickHandler = function(event) {
+          headingEl.textContent = "";
         var issue = event.target.getAttribute("data-number");
         console.log(issue);
         var heading = DoomComicsArr[issue].title; 
@@ -91,6 +92,8 @@ var displayDoomComics = function(comicData) {
     }
     
     var displayComicModal = function() {
+        
+
         backdrop.style.display = "flex";
         
         modal.style.display = "flex";
