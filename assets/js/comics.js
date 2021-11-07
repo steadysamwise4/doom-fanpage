@@ -50,11 +50,11 @@ var displayDoomComics = function(comicData) {
      modal.classList = "modal"
 
      var heading = DoomComicsArr[i].title;
-     var headingIndex = imgEl.getAttribute("data-number");
-     var head = DoomComicsArr[headingIndex].title;
+    
+     
      var headingEl = document.createElement('h3')
      headingEl.classList = "modal-head";
-     headingEl.textContent = head;
+     headingEl.textContent = heading;
      modal.appendChild(headingEl);
      
 
@@ -70,17 +70,20 @@ var displayDoomComics = function(comicData) {
         var imgEl = document.createElement("img");
         imgEl.setAttribute("src", img);
         imgEl.classList = "cover";
-        imgEl.setAttribute("data-number", i);
+        imgEl.setAttribute("data-number", "i");
         
         var listItemEl = document.createElement("li");
         listItemEl.textContent = title;
         listItemEl.classList = "list";
-        listItemEl.setAttribute("data-number", i);
+        listItemEl.setAttribute("data-number", "i");
         // console.log(title);
         comicListEl.appendChild(imgEl);
         comicListEl.appendChild(listItemEl);
 
-
+var buttonClickHandler = function(event) {
+    var issue = event.target.getAttribute("data-number");
+    console.log(issue);
+}
 
 var displayComicModal = function() {
     backdrop.style.display = "flex";
@@ -95,10 +98,11 @@ var closeComicModal = function() {
     modal.style.display = "none";
 }
 
-imgEl.onclick = displayComicModal;
-listItemEl.onclick = displayComicModal;
-backdrop.onclick = closeComicModal;
-
+// imgEl.onclick = displayComicModal;
+// listItemEl.onclick = displayComicModal;
+// backdrop.onclick = closeComicModal;
+comicListEl.addEventListener('click', buttonClickHandler);
+backdrop.addEventListener('click', closeComicModal);
         
       }
       
