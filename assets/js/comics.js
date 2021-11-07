@@ -50,6 +50,7 @@ var displayDoomComics = function(comicData) {
      var headingEl = document.createElement('h3')
      headingEl.classList = "modal-head";
      headingEl.textContent = heading;
+     modal.appendChild(headingEl);
 
      comicListEl.appendChild(backdrop);
      comicListEl.appendChild(modal);
@@ -69,6 +70,10 @@ var displayDoomComics = function(comicData) {
         comicListEl.appendChild(imgEl);
         comicListEl.appendChild(listItemEl);
 
+imgEl.onclick = displayComicModal;
+listItemEl.onclick = displayComicModal;
+backdrop.onclick = closeComicModal;
+
 
 var displayComicModal = function() {
     backdrop.style.display = "flex";
@@ -83,9 +88,7 @@ var closeComicModal = function() {
     modal.style.display = "none";
 }
 
-imgEl.onclick = displayComicModal;
-listItemEl.onclick = displayComicModal;
-backdrop.onclick = closeComicModal;
+
         
       }
       
