@@ -53,12 +53,12 @@ var displayDoomComics = function(comicData) {
      var headingEl = document.createElement('h3')
      headingEl.classList = "modal-head";
      headingEl.textContent = heading;
-     modalEl.appendChild(headingEl);
+     modal.appendChild(headingEl);
      
 
 
-     comicListEl.appendChild(backdropEl);
-     comicListEl.appendChild(modalEl);
+     comicListEl.appendChild(backdrop);
+     comicListEl.appendChild(modal);
        
 
 
