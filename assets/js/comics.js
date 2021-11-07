@@ -81,7 +81,7 @@ var displayDoomComics = function(comicData) {
         
       }
       var buttonClickHandler = function(event) {
-          
+          modal.innerHTML = "";
         var issue = event.target.getAttribute("data-number");
         if (issue <= 100) {
         console.log(issue);
@@ -96,6 +96,7 @@ var displayDoomComics = function(comicData) {
          creatorListEl.classList = "creators-list";
 
          var creatorsArr = DoomComicsArr[issue].creators.items;
+        
          for (var a = 0; a < creatorsArr.length; a++) {
         var job = creatorsArr[a].role;
         var person = creatorsArr[a].name;
@@ -105,11 +106,14 @@ var displayDoomComics = function(comicData) {
         creatorsEl.classList = "creator-list-item";
         creatorListEl.appendChild(creatorsEl);
         modal.appendChild(creatorListEl);
-
+        if (creatorsArr = {}) {
+            creatorsEl.innerHTML = "Creators Unavailable"
+        } else {
 
          
          displayComicModal();
          }
+        }
          // headingEl.textContent = "";
     } else {
         console.log(issue);
