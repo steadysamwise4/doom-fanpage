@@ -134,6 +134,8 @@ var displayDoomComics = function(comicData) {
         descriptContentEl.classList = "descript-content";
         descriptContentEl.textContent = DoomComicsArr[issue].description;
         modal.appendChild(descriptContentEl);
+
+        // additional images
         
         displayComicModal();
              
